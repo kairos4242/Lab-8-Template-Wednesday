@@ -79,6 +79,11 @@ public class CityList {
     }
 
     public String getFirstProvince() {
-      return "Default";
+        if (cities.size() == 0) {
+            throw new IllegalArgumentException();
+        }
+        else {
+            return cities.get(0).getProvinceName();
+        }
     };
 }
