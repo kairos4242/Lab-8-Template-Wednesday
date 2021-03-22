@@ -96,7 +96,8 @@ class CityListTest {
 
     @Test
     void testGetFirstProvince() {
-        CityList cityList = new CityList();
+        CityList cityList = mockCityList();
+
         //base case
         assertThrows(IllegalArgumentException.class, () -> {
             cityList.getFirstProvince();
